@@ -11,15 +11,15 @@ myImage.onclick = function() {
 var myButton = document.querySelector('button');
 var myHeading = document.querySelector('h1');
 function setUserName() {
-    var myName = prompt('Please enter your name.');
+    var myName = prompt('Введите ваше имя');
     localStorage.setItem('name', myName);
-    myHeading.textContent = 'Mozilla is cool, ' + myName;
+    myHeading.textContent = 'Салам алейкум, ' + myName;
   }
   if(!localStorage.getItem('name')) {
     setUserName();
   } else {
     var storedName = localStorage.getItem('name');
-    myHeading.textContent = 'Mozilla is cool, ' + storedName;
+    myHeading.textContent = 'Салам алейкум, ' + storedName;
   }
   myButton.onclick = function() {
     setUserName();
